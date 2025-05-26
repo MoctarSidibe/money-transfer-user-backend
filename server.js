@@ -14,7 +14,7 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 
 // MongoDB Connection
-const uri = process.env.MONGODB_URI || 'mongodb+srv://Moctar:<Karamoco/1>@cluster0.sacmkzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGODB_URI || 'mongodb+srv://Moctar:<Karamoco>@cluster0.sacmkzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));

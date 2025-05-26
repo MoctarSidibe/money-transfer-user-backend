@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-fileupload": "^1.5.1",
+    "mongoose": "^8.15.0",
     "react-bootstrap": "^2.10.10",
     "react-scripts": "^5.0.1"
   }

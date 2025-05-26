@@ -14,8 +14,10 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 
 // MongoDB Connection
-const uri = process.env.MONGODB_URI || 'mongodb+srv://Moctar:<Karamoco>@cluster0.sacmkzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+const username = 'Moctar';
+const password = process.env.MONGODB_PASSWORD; // Use environment variable for password
+const uri = process.env.MONGODB_URI || `mongodb+srv://${username}:${password}@cluster0.sacmkzq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+mongoose.connect(uri)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
